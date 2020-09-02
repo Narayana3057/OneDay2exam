@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" >
+  <meta charset="utf-8">
+	<title>One Day to Exam</title>
+  <link rel = "icon" href = "../images/title_logo.jpg" type = "image/x-icon"> 
+	<link rel="stylesheet" type="text/css" href="../CSS/style.css">
+ 
+
+</head>
+<body onload="load()">
+
+   <button onclick="topFunction()" id="up" title="Go to top">Top</button>
+
+    <header>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+        
+      </label>
+      <img src="../images/logo.png" alt="No">
+      <ul>
+        <li><a href="../index.html">Home </a></li>
+        <li>
+          <a href="#" onclick="document.getElementById('login').style.display='block'" >LogIn</a>
+        </li>
+        <li>
+          <a href="#" onclick="document.getElementById('signup').style.display='block'" >SignUp</a>
+        </li>
+        <li>
+          <a href="#foot">About</a>
+        </li>
+        <li>
+          <a href="#" onclick="document.getElementById('contact').style.display='block'" >contact</a>
+        </li>
+      </ul>
+
+    </nav>
+
+          <div id="login" class="modal">
+            <form class="modal-content animate" action="/action_page.php" method="post">
+              <div class="imgcontainer" >
+                <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
+      
+              </div>
+              <div class="container">
+                <h1 align="center">Login</h1>
+
+                  <label for="uname"><b>Username</b></label>
+                  <input type="text" placeholder="Enter Username" name="uname" required>
+
+                  <label for="psw"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password" name="psw" required>
+        
+                  <button type="submit">Login</button>
+                  <label>
+                  </label>
+              </div>
+
+              <div class="container" style="background-color:#fff">
+                  <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
+                  <span class="psw"><a class="link" href="#">Forgot password?</a></span>
+              </div>
+            </form>
+          </div>
+          <div id="signup" class="modal">
+            <form class="modal-content animate" action="/action_page.php" method="post">
+              <div class="imgcontainer" >
+                <span onclick="document.getElementById('signup').style.display='none'" class="close" title="Close Modal">&times;</span>
+              </div>
+              <div class="container">
+                <h1 align="center">SignUp</h1><br>
+                  <label for="uname"><b>Email Id</b></label>
+                  <input type="text" placeholder="Enter Email Id" name="uname" required>
+                  <label for="uname"><b>Mobile No</b></label>
+                  <input type="text" placeholder="Enter Mobile number" name="uname" required>
+                  <label for="psw"><b>Create Password</b></label>
+                  <input type="password" placeholder="Enter Password" name="psw" required>
+                  <label for="psw"><b>Confirm Password</b></label>
+                  <input type="password" placeholder="Confirm Password" name="psw" required> 
+                  <button type="submit">Signup</button>
+                  <label>
+                  </label>
+              </div>
+              <div class="container" style="background-color:#fff">
+                  <button type="button" onclick="document.getElementById('signup').style.display='none'" class="cancelbtn">Cancel</button>
+              </div>
+              </form>
+          </div>
+
+          <div id="contact" class="modal">
+              <form class="modal-content animate" action="/action_page.php" method="post">
+                <div class="imgcontainer" >
+                  <span onclick="document.getElementById('contact').style.display='none'" class="close" title="Close Modal">&times;</span>
+                </div>
+                <div class="container">
+                  <h1 align="center">Get in touch</h1><br>
+                  <label for="uname"><b>Name</b></label>
+                  <input type="text" placeholder="Enter Name" name="uname" required>
+                  <label for="uname"><b>Email id</b></label>
+                  <input type="text" placeholder="Enter Email id" name="uname" required>
+                  <input type="text" placeholder="Subject" name="psw" required>
+                  <input type="text   " placeholder="Type your message here" name="psw" required>
+                  <button type="submit">Submit</button>
+                  <label>
+                  </label>
+                </div>
+              </form>
+          </div>
+  </header>
+  <section class="year">
+    <h1 align="center"></h1><br>
+    <div class="box-year">
+      <h1>1'st YEAR</h1>
+      <button id="o1"   onclick="open_close('first','opn','o1','c1');"><b>VIEW</b></button>
+      <button id="c1"   onclick="open_close('first','cls','o1','c1');"><b>CLOSE</b></button>
+    </div>
+    <div id="first"> 
+        <div  class="res-container" >
+            <div class="box-sub">
+                 <h2>ENGLISH</h2>
+                  <br>
+                <button class="Lec-btn" onclick="Lecture_fun('ENGLISH');"><b>Lecture Notes</b></button>
+                <button class="Que-btn" onclick="oneday2exam_fun('ENGLISH');"><b>OneDay2Exam</b></button>
+            </div>
+            <div class="box-sub">
+                <h2>MATHEMATICS-I</h2>
+                <br>
+            <button class="Lec-btn"  onclick="Lecture_fun('MATHEMATICS-I');"><b>Lecture Notes</b></button>
+            <button class="Que-btn" onclick="oneday2exam_fun('MATHEMATICS-I');"><b>OneDay2Exam</b></button>
+            </div>
+            <div class="box-sub">
+              <h2>APPLIED CHEMISTRY</h2>
+              <br>
+              <button class="Lec-btn" onclick="Lecture_fun('APPLIED CHEMISTRY');"><b>Lecture Notes</b></button>
+              <button class="Que-btn" onclick="oneday2exam_fun('APPLIED CHEMISTRY');"><b>OneDay2Exam</b></button>
+            </div>
+            <div class="box-sub">
+              <h2>APPLIED PHYSICS</h2>
+              <br>
+              <button class="Lec-btn"  onclick="Lecture_fun('APPLIED PHYSICS');"><b>Lecture Notes</b></button>
+              <button class="Que-btn" onclick="oneday2exam_fun('APPLIED PHYSICS');"><b>OneDay2Exam</b></button>
+              </div>
+            <div class="box-sub">
+                  <h2>MATHEMATICS-II</h2>
+              <br>
+              <button class="Lec-btn" onclick="Lecture_fun('MATHEMATICS-II');"><b>Lecture Notes</b></button>
+              <button class="Que-btn" onclick="oneday2exam_fun('MATHEMATICS-II');"><b>OneDay2Exam</b></button>
+            </div>
+            <div class="box-sub">
+              <h2>MATHEMATICS-III</h2>
+              <br>
+              <button class="Lec-btn"  onclick="Lecture_fun('MATHEMATICS-III');"><b>Lecture Notes</b></button>
+              <button class="Que-btn" onclick="oneday2exam_fun('MATHEMATICS-III');"><b>OneDay2Exam</b></button>
+            </div>
+            <div class="box-sub">
+              <h2>ENGINEERING DRAWING</h2>
+              <br>
+              <button class="Lec-btn" onclick="Lecture_fun('ENGINEERING DRAWING');"><b>Lecture Notes</b></button>
+              <button class="Que-btn" onclick="oneday2exam_fun('ENGINEERING DRAWING');"><b>OneDay2Exam</b></button>
+            </div>
+            <div class="box-sub">
+              <h2>DIGITAL LOGIC DESIGN(DLD)</h2>
+              <br>
+              <button class="Lec-btn" onclick="Lecture_fun('DIGITAL LOGIC DESIGN(DLD)');"><b>Lecture Notes</b></button>
+              <button class="Que-btn" onclick="oneday2exam_fun('DIGITAL LOGIC DESIGN(DLD)');"><b>OneDay2Exam</b></button>
+            </div>
+            <div class="box-sub">
+              <h2>FUNDAMENTALS OF COMPUTER SCIENCE</h2>
+              <br>
+              <button class="Lec-btn"  onclick="Lecture_fun('FUNDAMENTALS OF COMPUTER SCIENCE');"><b>Lecture Notes</b></button>
+              <button class="Que-btn" onclick="oneday2exam_fun('FUNDAMENTALS OF COMPUTER SCIENCE');"><b>OneDay2Exam</b></button>
+            </div>
+            <div class="box-sub">
+              <h2>PROGRAMMING FOR PROPLEM SOLVING USING C</h2>
+              <br>
+              <button class="Lec-btn"  onclick="Lecture_fun('PROGRAMMING FOR PROPLEM SOLVING USING C');"><b>Lecture Notes</b></button>
+              <button class="Que-btn" onclick="oneday2exam_fun('PROGRAMMING FOR PROPLEM SOLVING USING C');"><b>OneDay2Exam</b></button>
+            </div>
+        </div>
+    </div>
+       <br>
+    <div class="box-year">
+       <h1>2'nd YEAR </h1>
+      <button id="o2"   onclick="open_close('second','opn','o2','c2');"><b>VIEW</b></button>
+      <button id="c2"   onclick="open_close('second','cls','o2','c2');"><b>CLOSE</b></button>
+    </div>
+    <div id="second"> 
+        <div  class="res-container" >
+            <div class="box-sub">
+                 <h2>ENGLISH</h2>
+                  <br>
+                <button class="Lec-btn" onclick="Lecture_fun('ENGLISH');"><b>Lecture Notes</b></button>
+                <button class="Que-btn" onclick="oneday2exam_fun('ENGLISH');"><b>OneDay2Exam</b></button>
+            </div>
+            <div class="box-sub">
+                <h2>MATHEMATICS-I</h2>
+                <br>
+            <button class="Lec-btn"  onclick="Lecture_fun('MATHEMATICS-I');"><b>Lecture Notes</b></button>
+            <button class="Que-btn" onclick="oneday2exam_fun('MATHEMATICS-I');"><b>OneDay2Exam</b></button>
+            </div>
+            <div class="box-sub">
+              <h2>APPLIED CHEMISTRY</h2>
+              <br>
+              <button class="Lec-btn" onclick="Lecture_fun('APPLIED CHEMISTRY');"><b>Lecture Notes</b></button>
+              <button class="Que-btn" onclick="oneday2exam_fun('APPLIED CHEMISTRY');"><b>Question Papers</b></button>
+            </div>
+            <div class="box-sub">
+              <h2>APPLIED PHYSICS</h2>
+              <br>
+              <button class="Lec-btn"  onclick="Lecture_fun('APPLIED PHYSICS');"><b>Lecture Notes</b></button>
+              <button class="Que-btn" onclick="oneday2exam_fun('APPLIED PHYSICS');"><b>Question Papers</b></button>
+              </div>
+            <div class="box-sub">
+                  <h2>MATHEMATICS-II</h2>
+              <br>
+              <button class="Lec-btn" onclick="Lecture_fun('MATHEMATICS-II');"><b>Lecture Notes</b></button>
+              <button class="Que-btn" onclick="oneday2exam_fun('MATHEMATICS-II');"><b>Question Papers</b></button>
+            </div>
+            <div class="box-sub">
+              <h2>MATHEMATICS-III</h2>
+              <br>
+              <button class="Lec-btn"  onclick="Lecture_fun('MATHEMATICS-III');"><b>Lecture Notes</b></button>
+              <button class="Que-btn" onclick="oneday2exam_fun('MATHEMATICS-III');"><b>Question Papers</b></button>
+            </div>
+            <div class="box-sub">
+              <h2>ENGINEERING DRAWING</h2>
+              <br>
+              <button class="Lec-btn" onclick="Lecture_fun('ENGINEERING DRAWING');"><b>Lecture Notes</b></button>
+              <button class="Que-btn" onclick="oneday2exam_fun('ENGINEERING DRAWING');"><b>Question Papers</b></button>
+            </div>
+            <div class="box-sub">
+              <h2>DIGITAL LOGIC DESIGN(DLD)</h2>
+              <br>
+              <button class="Lec-btn" onclick="Lecture_fun('DIGITAL LOGIC DESIGN(DLD)');"><b>Lecture Notes</b></button>
+              <button class="Que-btn" onclick="oneday2exam_fun('DIGITAL LOGIC DESIGN(DLD)');"><b>Question Papers</b></button>
+            </div>
+            <div class="box-sub">
+              <h2>FUNDAMENTALS OF COMPUTER SCIENCE</h2>
+              <br>
+              <button class="Lec-btn"  onclick="Lecture_fun('FUNDAMENTALS OF COMPUTER SCIENCE');"><b>Lecture Notes</b></button>
+              <button class="Que-btn" onclick="oneday2exam_fun('FUNDAMENTALS OF COMPUTER SCIENCE');"><b>Question Papers</b></button>
+            </div>
+            <div class="box-sub">
+              <h2>PROGRAMMING FOR PROPLEM SOLVING USING C</h2>
+              <br>
+              <button class="Lec-btn"  onclick="Lecture_fun('PROGRAMMING FOR PROPLEM SOLVING USING C');"><b>Lecture Notes</b></button>
+              <button class="Que-btn" onclick="oneday2exam_fun('PROGRAMMING FOR PROPLEM SOLVING USING C');"><b>Question Papers</b></button>
+            </div>
+        </div>
+    </div>
+      <br>
+    <div class="box-year">
+      <h1>3'rd YEAR </h1>
+      <button id="o3" class="click-btn"  onclick="open_close('third','opn','o3','c3');"><b>VIEW</b></button>
+      <button id="c3" class="click-btn"  onclick="open_close('third','cls','o3','c3');"><b>CLOSE</b></button>
+    </div>
+     <div id="third"> 
+        <div  class="res-container" >
+            <div class="box-sub">
+                 <h2>ENGLISH</h2>
+                  <br>
+                <button class="Lec-btn" onclick="Lecture_fun('ENGLISH');"><b>Lecture Notes</b></button>
+                <button class="Que-btn" onclick="oneday2exam_fun('ENGLISH');"><b>OneDay2Exam</b></button>
+            </div>
+            <div class="box-sub">
+                <h2>MATHEMATICS-I</h2>
+                <br>
+            <button class="Lec-btn"  onclick="Lecture_fun('MATHEMATICS-I');"><b>Lecture Notes</b></button>
+            <button class="Que-btn" onclick="oneday2exam_fun('MATHEMATICS-I');"><b>OneDay2Exam</b></button>
+            </div>
+            <div class="box-sub">
+              <h2>APPLIED CHEMISTRY</h2>
+              <br>
+              <button class="Lec-btn" onclick="Lecture_fun('APPLIED CHEMISTRY');"><b>Lecture Notes</b></button>
+              <button class="Que-btn" onclick="oneday2exam_fun('APPLIED CHEMISTRY');"><b>Question Papers</b></button>
+            </div>
+            <div class="box-sub">
+              <h2>APPLIED PHYSICS</h2>
+              <br>
+              <button class="Lec-btn"  onclick="Lecture_fun('APPLIED PHYSICS');"><b>Lecture Notes</b></button>
+              <button class="Que-btn" onclick="oneday2exam_fun('APPLIED PHYSICS');"><b>Question Papers</b></button>
+              </div>
+            <div class="box-sub">
+                  <h2>MATHEMATICS-II</h2>
+              <br>
+              <button class="Lec-btn" onclick="Lecture_fun('MATHEMATICS-II');"><b>Lecture Notes</b></button>
+              <button class="Que-btn" onclick="oneday2exam_fun('MATHEMATICS-II');"><b>Question Papers</b></button>
+            </div>
+            <div class="box-sub">
+              <h2>MATHEMATICS-III</h2>
+              <br>
+              <button class="Lec-btn"  onclick="Lecture_fun('MATHEMATICS-III');"><b>Lecture Notes</b></button>
+              <button class="Que-btn" onclick="oneday2exam_fun('MATHEMATICS-III');"><b>Question Papers</b></button>
+            </div>
+            <div class="box-sub">
+              <h2>ENGINEERING DRAWING</h2>
+              <br>
+              <button class="Lec-btn" onclick="Lecture_fun('ENGINEERING DRAWING');"><b>Lecture Notes</b></button>
+              <button class="Que-btn" onclick="oneday2exam_fun('ENGINEERING DRAWING');"><b>Question Papers</b></button>
+            </div>
+            <div class="box-sub">
+              <h2>DIGITAL LOGIC DESIGN(DLD)</h2>
+              <br>
+              <button class="Lec-btn" onclick="Lecture_fun('DIGITAL LOGIC DESIGN(DLD)');"><b>Lecture Notes</b></button>
+              <button class="Que-btn" onclick="oneday2exam_fun('DIGITAL LOGIC DESIGN(DLD)');"><b>Question Papers</b></button>
+            </div>
+            <div class="box-sub">
+              <h2>FUNDAMENTALS OF COMPUTER SCIENCE</h2>
+              <br>
+              <button class="Lec-btn"  onclick="Lecture_fun('FUNDAMENTALS OF COMPUTER SCIENCE');"><b>Lecture Notes</b></button>
+              <button class="Que-btn" onclick="oneday2exam_fun('FUNDAMENTALS OF COMPUTER SCIENCE');"><b>Question Papers</b></button>
+            </div>
+            <div class="box-sub">
+              <h2>PROGRAMMING FOR PROPLEM SOLVING USING C</h2>
+              <br>
+              <button class="Lec-btn"  onclick="Lecture_fun('PROGRAMMING FOR PROPLEM SOLVING USING C');"><b>Lecture Notes</b></button>
+              <button class="Que-btn" onclick="oneday2exam_fun('PROGRAMMING FOR PROPLEM SOLVING USING C');"><b>Question Papers</b></button>
+            </div>
+        </div>
+    </div>
+      <br>
+    <div class="box-year">
+      <h1>4'th YEAR </h1>
+      <button id="o4" class="click-btn"  onclick="open_close('fourth','opn','o4','c4');"><b>VIEW</b></button>
+      <button id="c4" class="click-btn"  onclick="open_close('fourth','cls','o4','c4');"><b>CLOSE</b></button>
+    </div>
+     <div id="fourth"> 
+        <div  class="res-container" >
+            <div class="box-sub">
+                 <h2>ENGLISH</h2>
+                  <br>
+                <button class="Lec-btn" onclick="Lecture_fun('ENGLISH');"><b>Lecture Notes</b></button>
+                <button class="Que-btn" onclick="oneday2exam_fun('ENGLISH');"><b>OneDay2Exam</b></button>
+            </div>
+            <div class="box-sub">
+                <h2>MATHEMATICS-I</h2>
+                <br>
+            <button class="Lec-btn"  onclick="Lecture_fun('MATHEMATICS-I');"><b>Lecture Notes</b></button>
+            <button class="Que-btn" onclick="oneday2exam_fun('MATHEMATICS-I');"><b>OneDay2Exam</b></button>
+            </div>
+            <div class="box-sub">
+              <h2>APPLIED CHEMISTRY</h2>
+              <br>
+              <button class="Lec-btn" onclick="Lecture_fun('APPLIED CHEMISTRY');"><b>Lecture Notes</b></button>
+              <button class="Que-btn" onclick="oneday2exam_fun('APPLIED CHEMISTRY');"><b>Question Papers</b></button>
+            </div>
+            <div class="box-sub">
+              <h2>APPLIED PHYSICS</h2>
+              <br>
+              <button class="Lec-btn"  onclick="Lecture_fun('APPLIED PHYSICS');"><b>Lecture Notes</b></button>
+              <button class="Que-btn" onclick="oneday2exam_fun('APPLIED PHYSICS');"><b>Question Papers</b></button>
+              </div>
+            <div class="box-sub">
+                  <h2>MATHEMATICS-II</h2>
+              <br>
+              <button class="Lec-btn" onclick="Lecture_fun('MATHEMATICS-II');"><b>Lecture Notes</b></button>
+              <button class="Que-btn" onclick="oneday2exam_fun('MATHEMATICS-II');"><b>Question Papers</b></button>
+            </div>
+            <div class="box-sub">
+              <h2>MATHEMATICS-III</h2>
+              <br>
+              <button class="Lec-btn"  onclick="Lecture_fun('MATHEMATICS-III');"><b>Lecture Notes</b></button>
+              <button class="Que-btn" onclick="oneday2exam_fun('MATHEMATICS-III');"><b>Question Papers</b></button>
+            </div>
+            <div class="box-sub">
+              <h2>ENGINEERING DRAWING</h2>
+              <br>
+              <button class="Lec-btn" onclick="Lecture_fun('ENGINEERING DRAWING');"><b>Lecture Notes</b></button>
+              <button class="Que-btn" onclick="oneday2exam_fun('ENGINEERING DRAWING');"><b>Question Papers</b></button>
+            </div>
+            <div class="box-sub">
+              <h2>DIGITAL LOGIC DESIGN(DLD)</h2>
+              <br>
+              <button class="Lec-btn" onclick="Lecture_fun('DIGITAL LOGIC DESIGN(DLD)');"><b>Lecture Notes</b></button>
+              <button class="Que-btn" onclick="oneday2exam_fun('DIGITAL LOGIC DESIGN(DLD)');"><b>Question Papers</b></button>
+            </div>
+            <div class="box-sub">
+              <h2>FUNDAMENTALS OF COMPUTER SCIENCE</h2>
+              <br>
+              <button class="Lec-btn"  onclick="Lecture_fun('FUNDAMENTALS OF COMPUTER SCIENCE');"><b>Lecture Notes</b></button>
+              <button class="Que-btn" onclick="oneday2exam_fun('FUNDAMENTALS OF COMPUTER SCIENCE');"><b>Question Papers</b></button>
+            </div>
+            <div class="box-sub">
+              <h2>PROGRAMMING FOR PROPLEM SOLVING USING C</h2>
+              <br>
+              <button class="Lec-btn"  onclick="Lecture_fun('PROGRAMMING FOR PROPLEM SOLVING USING C');"><b>Lecture Notes</b></button>
+              <button class="Que-btn" onclick="oneday2exam_fun('PROGRAMMING FOR PROPLEM SOLVING USING C');"><b>Question Papers</b></button>
+            </div>
+        </div>
+    </div>
+  </section>
+    
+
+  
+ 
+
+	<footer id="foot">
+		<h1 align="center" >ABOUT US</h1><br>
+		<p align="center"> OneDay2Exam is proud to collect & produce wonderful and engaging content for all of you to enjoy. We have chosen best content for each topic and arranged it so you can study it in one go. Here, you’ll be able to follow OneDay2Exam, the creative process, and the creative journey.
+			
+		</p><br>
+			<p align="center">Today, video content is one of today’s most challenging and exciting mediums. OneDayToExam is constantly on the lookout for new ways to express ideas, and is always thrilled to collaborate with other artists in the video community. Take a look around the site, and please don’t hesitate to send feedback or ask questions.</p><br>
+         <p align="center">&copy2020 by OneDay2Exam</p><br>
+	</footer>
+
+
+
+  <div id="oneday2exam_id" class="modal">             
+         <section class="modal-content animate">
+               <div class="imgcontainer" >
+                 <span onclick="document.getElementById('oneday2exam_id').style.display='none'" class="close" title="Close Modal">&times;</span><br>
+                 <h1 align="center" id='h2id' style="color: #000;"></h1>
+                  <h1 align="center" style="color: #000;">OneDay2Exam</h1>
+              </div>   
+              <div class="container"><br>
+                <button class="unit-btn" onclick="download('QUETION-PAPERS');"><b>Question papers</b></button>
+                <button class="unit-btn" onclick="download('IMP-QUSTION');"><b>Important Quetions</b></button>
+                <button class="unit-btn" onclick="download('IMP-TOPICS-ANS');"><b>Important Topics with Answers</b></button>
+              </div>
+       </section>
+  </div>
+   <div id="lecture-notes_id" class="modal">              
+         <section class="modal-content animate">
+               <div class="imgcontainer" >
+                  <span onclick="document.getElementById('lecture-notes_id').style.display='none'" class="close" title="Close Modal">&times;</span><br>
+                  <h1 align="center" id='h1id' style="color: #000;"></h1>
+                   <h1 align="center" style="color: #000;">Lecture notes</h1>
+              </div>
+              <div class="container">
+                <button class="unit-btn" onclick="download('SYLLABUS');"><b>SYLLABUS</b></button>
+                <button class="unit-btn" onclick="download('UNIT-1');"><b>UNIT-1</b></button>
+                <button class="unit-btn"  onclick="download('UNIT-2');"><b>UNIT-2</b></button>
+                <button class="unit-btn"  onclick="download('UNIT-3');"><b>UNIT-3</b></button>
+                <button class="unit-btn"  onclick="download('UNIT-4');"><b>UNIT-4</b></button>
+                <button class="unit-btn"  onclick="download('UNIT-5');"><b>UNIT-5</b></button>
+                <button class="unit-btn"  onclick="download('UNIT-6');"><b>UNIT-6</b></button>
+              </div>
+       </section>
+  </div>
+
+
+   <script src="../JavaScript/script.js"></script>
+
+</body>
+</html>

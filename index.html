@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" >
+	<meta charset="utf-8">
+	<title>One Day 2 Exam</title>
+	<link rel = "icon" href = "images/title_logo.jpg" type = "image/x-icon"> 
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+	
+</head>
+<body>
+    <header>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+        
+      </label>
+      <img src="images/logo.png" alt="No">
+      <ul>
+        <li><a href="index.html">Home </a></li>
+        <li>
+          <a href="#" onclick="document.getElementById('login').style.display='block'" >LogIn</a>
+        </li>
+        <li>
+          <a href="#" onclick="document.getElementById('signup').style.display='block'" >SignUp</a>
+        </li>
+        <li>
+          <a href="#foot">About</a>
+        </li>
+        <li>
+          <a href="#" onclick="document.getElementById('contact').style.display='block'" >contact</a>
+        </li>
+      </ul>
+
+    </nav>
+
+          <div id="login" class="modal">
+            <form class="modal-content animate" action="/action_page.php" method="post">
+              <div class="imgcontainer" >
+                <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
+      
+              </div>
+              <div class="container">
+                <h1 align="center">Login</h1>
+
+                  <label for="uname"><b>Username</b></label>
+                  <input type="text" placeholder="Enter Username" name="uname" required>
+
+                  <label for="psw"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password" name="psw" required>
+        
+                  <button type="submit">Login</button>
+                  <label>
+                  </label>
+              </div>
+
+              <div class="container" style="background-color:#fff">
+                  <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
+                  <span class="psw"><a class="link" href="#">Forgot password?</a></span>
+              </div>
+            </form>
+          </div>
+          <div id="signup" class="modal">
+            <form class="modal-content animate" action="/action_page.php" method="post">
+              <div class="imgcontainer" >
+                <span onclick="document.getElementById('signup').style.display='none'" class="close" title="Close Modal">&times;</span>
+              </div>
+              <div class="container">
+                <h1 align="center">SignUp</h1><br>
+                  <label for="uname"><b>Email Id</b></label>
+                  <input type="text" placeholder="Enter Email Id" name="uname" required>
+                  <label for="uname"><b>Mobile No</b></label>
+                  <input type="text" placeholder="Enter Mobile number" name="uname" required>
+                  <label for="psw"><b>Create Password</b></label>
+                  <input type="password" placeholder="Enter Password" name="psw" required>
+                  <label for="psw"><b>Confirm Password</b></label>
+                  <input type="password" placeholder="Confirm Password" name="psw" required> 
+                  <button type="submit">Signup</button>
+                  <label>
+                  </label>
+              </div>
+              <div class="container" style="background-color:#fff">
+                  <button type="button" onclick="document.getElementById('signup').style.display='none'" class="cancelbtn">Cancel</button>
+              </div>
+              </form>
+          </div>
+
+          <div id="contact" class="modal">
+              <form class="modal-content animate" action="/action_page.php" method="post">
+                <div class="imgcontainer" >
+                  <span onclick="document.getElementById('contact').style.display='none'" class="close" title="Close Modal">&times;</span>
+                </div>
+                <div class="container">
+                  <h1 align="center">Get in touch</h1><br>
+                  <label for="uname"><b>Name</b></label>
+                  <input type="text" placeholder="Enter Name" name="uname" required>
+                  <label for="uname"><b>Email id</b></label>
+                  <input type="text" placeholder="Enter Email id" name="uname" required>
+                  <input type="text" placeholder="Subject" name="psw" required>
+                  <input type="text" placeholder="Type your message here" name="psw" required>
+                  <button type="submit">Submit</button>
+                  <label>
+                  </label>
+                </div>
+              </form>
+          </div>
+  </header>
+  <div align="center" class="main">
+  	<br><br><br><br>
+  	<h1> OneDay2Exam</h1><br>
+  	<a   href="#learn" class="btn"><b>START LEARNING</b></a>
+  </div>
+     
+     <section class="res-container" id="learn">
+    <div class="box">
+      <h1>CSE</h1><br>
+      <p><b>Computer Science and Engineering</b>
+      </p><br>
+    <button class="click-btn" type="button" onclick="move_to_years('A/year.html');" >Click Here</button>
+    </div>
+
+    <div class="box">
+      <h1>ECE</h1><br>
+     <p><b>Electronics and Communication Engineering</b></p><br>
+      <button class="click-btn" type="button" onclick="move_to_years('Electronics and Communication Engineering')">Click Here</button>
+    </div>
+
+    <div class="box">
+      <h1>EEE</h1><br>
+     <p><b>Elctrical and Electronics Engineering</b></p><br>
+      <button class="click-btn" onclick="move_to_years('Elctrical and Electronics Engineering')">Click Here</button>
+    </div>
+
+    <div class="box">
+      <h1>MEC</h1><br>
+      <p><b>Mechanical</b></p>
+      <p><b>
+      Engineering</b></p><br>
+      <button class="click-btn" onclick="move_to_years('Mechanical Engineering')">Click Here</button>
+    </div>
+
+  </section>
+
+	
+  <footer id="foot">
+		<h1 align="center">ABOUT US</h1><br>
+		<p align="center"> OneDay2Exam is proud to collect & produce wonderful and engaging content for all of you to enjoy. We have chosen best content for each topic and arranged it so you can study it in one go. Here, you’ll be able to follow OneDay2Exam, the creative process, and the creative journey.
+			
+		</p><br>
+			<p align="center">Today, video content is one of today’s most challenging and exciting mediums. OneDayToExam is constantly on the lookout for new ways to express ideas, and is always thrilled to collaborate with other artists in the video community. Take a look around the site, and please don’t hesitate to send feedback or ask questions.</p><br>
+         <p align="center">&copy2020 by OneDay2Exam</p><br>
+
+	</footer>
+	
+	
+     
+
+	   <script src="JavaScript/script.js"></script>
+  
+
+</body>
+</html>
